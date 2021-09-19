@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from core import views
 
-urlpatterns = [
+urlpatterns = {
     path('admin/', admin.site.urls),
-    path('hello/<nome>/<int:idade>/', views.hello)
-]
+    path('hello/<nome>/<int:idade>/', views.hello),
+    path('A soma é/<nome>/<int:total>/', views.soma)
+}
